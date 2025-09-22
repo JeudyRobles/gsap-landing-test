@@ -11,6 +11,7 @@ body {
   background-color: #f0f2f1;
   color: #171717;
   position: relative;
+  overflow-x: hidden;
 }
 
 h1,
@@ -126,7 +127,6 @@ a {
 .Background {
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
