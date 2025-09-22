@@ -1,89 +1,93 @@
-window.onload = function() {
+window.onload = function () {
+
   /* Inicio de Pantalla de carga */
-  
-const text = new SplitType(".loading-title", { types: "chars" });
 
-let timeline = gsap.timeline();
+  const text = new SplitType(".loading-title", { types: "chars" });
 
-timeline.from(".loading-title .char", {
-  y: "100%",
-  duration: 1,
-  ease: "power4.out",
-  stagger: 0.1,
-  delay: 1
-})
-.to(".loading-title span", {
-  y: "100%",
-  duration: 0.5,
-  ease: "power4.in",
-  stagger: 0.1,
-  delay: 0.5
-});
+  let timeline = gsap.timeline();
 
-let timelinebackground = gsap.timeline();
+  timeline
+    .from(".loading-title .char", {
+      y: "100%",
+      duration: 1,
+      ease: "power2.inOut",
+      stagger: 0.1,
+      delay: 1,
+    })
+    .to(".loading-title span", {
+      y: "100%",
+      duration: 0.5,
+      ease: "power4.in",
+      stagger: 0.05,
+      delay: 0.5,
+    });
 
-timelinebackground.to('.loading-screen', {
-  delay: 6,
-  yPercent: -1000,
-  duration: 1,
-  ease: "sine.in"
-}) 
+  timeline.to(".loading-screen", {
+    opacity: 0,
+    duration: 0.8,
+    delay: 0.5,
+    onComplete: () => {
+      document.querySelector(".loading-screen").style.display = "none";
+    },
+  });
 
-/* Fin de Pantalla de carga */
+  /* Fin de Pantalla de carga */
 
-/* Inicio de Landing Page */
+  /* Inicio de Landing Page */
 
-const title = new SplitType('.title', { types: 'words' }, '.span-title');
-gsap.from('.span-title .word', {
-  y: '150%',
-  duration: 1,
-  ease: "sine.out",
-  stagger: 0.05, // Ajusta el tiempo entre palabras
-  delay: 6.5
-});
+  const title = new SplitType(".title", { types: "words" }, ".span-title");
+  gsap.from(".span-title .word", {
+    y: "150%",
+    duration: 1,
+    ease: "sine.out",
+    stagger: 0.05, // Ajusta el tiempo entre palabras
+    delay: 6.5,
+  });
 
-gsap.from('.subtitle', {
-  opacity: 0,
-  duration: 1,
-  ease: "none",
-  delay: 6.5
-});
+  gsap.from(".subtitle", {
+    opacity: 0,
+    duration: 1,
+    ease: "none",
+    delay: 6.5,
+  });
 
-/* Fin de Landing Page */
+  gsap.from(".background", {
+    scale: 1.1,
+    duration: 5,
+    ease: "none",
+    delay: 6.5,
+  });
 
-/* Inicio Costa Rica Background */
+  /* Fin de Landing Page */
 
-const costaRica = document.querySelector('.CostaRica');
-const costaRicaBackground = document.querySelector('.costaRicaBackground');
+  /* Inicio Costa Rica Background */
 
-const TL = gsap.timeline({ paused: true });
+  const costaRica = document.querySelector(".CostaRica");
+  const costaRicaBackground = document.querySelector(".costaRicaBackground");
 
-TL.to(costaRicaBackground, {
-  opacity: 1,
-  duration: 0.6,
-  ease: "power1.inOut"
-});
+  const TL = gsap.timeline({ paused: true });
 
-costaRica.addEventListener("mouseenter", () => {
-  TL.play();
-});
-costaRica.addEventListener("mouseout", () => {
-  TL.reverse();
-});
+  TL.to(costaRicaBackground, {
+    opacity: 1,
+    duration: 0.6,
+    ease: "power1.inOut",
+  });
 
-/* Fin Costa Rica Background */
+  costaRica.addEventListener("mouseenter", () => {
+    TL.play();
+  });
+  costaRica.addEventListener("mouseout", () => {
+    TL.reverse();
+  });
 
-/* Inicio Button Animation */
+  /* Fin Costa Rica Background */
 
-gsap.to('.btn', {
-  scale: 1,
-  duration: 1,
-  ease: "power1.out",
-  delay: 6.5
-});
+  /* Inicio Button Animation */
 
-
-}
-
-
-
+  gsap.to(".btn", {
+    scale: 1,
+    duration: 5,
+    ease: "power1.inOut",
+    delay: 7,
+  });
+};
