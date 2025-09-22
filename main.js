@@ -35,6 +35,57 @@ window.onload = function () {
 
   /* Fin de Pantalla de carga */
 
+  /* Menu de navegacion */
+
+  gsap.from(".logo", {
+    x: "-500%",
+    duration: 1,
+    ease: "power2.out",
+    delay: 6.5,
+  });
+
+  gsap.from(".div-header-btn, .logo-icon", {
+    y: "-500%",
+    duration: 1,
+    ease: "power2.out",
+    delay: 6.5,
+  });
+
+  const menu_info = new SplitType(".menu-info ul li", { types: "chars" });
+  gsap.from(".menu-info ul li a .char", {
+    y: "500%",
+    duration: 1,
+    ease: "power2.out",
+    delay: 6.5,
+  });
+
+  /* Menu de navegacion vertical izquierda */
+
+  gsap.from(".custom-nav", {
+    x: "-500%",
+    duration: 1,
+    ease: "power2.out",
+    delay: 6.5,
+  });
+
+   /* Menu de redes sociales */
+
+  gsap.from(".container-redes-sociales",{ 
+    x: "-1000%",
+    duration: 1,
+    ease: "power2.out",
+    delay: 6.5,
+  });
+
+  /* Menu de navegacion mobile abajo centro */
+
+  gsap.from(".custom-nav-mobile", {
+    opacity: 0,
+    duration: 1,
+    ease: "power2.out",
+    delay: 6.5,
+  });
+
   /* Inicio de Landing Page */
 
   const title = new SplitType(".title", { types: "words" }, ".span-title");
