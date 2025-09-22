@@ -124,13 +124,13 @@ a {
 }
 
 .Background {
-  width: 100%;
-  height: auto;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
   position: absolute;
-  min-height: 100vh;
-  z-index: -2;
   top: 0;
   left: 0;
+  z-index: -20;
 }
 
 /* Button Styles */
@@ -179,6 +179,11 @@ a {
 }
 
 @media (max-width: 580px) {
+  .Background {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
   .loading-screen {
     flex-direction: column;
   }
