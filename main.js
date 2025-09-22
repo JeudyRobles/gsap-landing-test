@@ -6,6 +6,8 @@ window.onload = function () {
 
   let timeline = gsap.timeline();
 
+  gsap.to('.loading-title', { opacity: 1, stagger: 0.2 });
+
   timeline
     .from(".loading-title .char", {
       y: "100%",
