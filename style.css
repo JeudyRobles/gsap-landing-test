@@ -96,8 +96,8 @@ li {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  border-bottom: 1px solid var(--gray-light);
   font-family: "Geist", sans-serif;
+  z-index: 250;
 }
 
 .logo h1 {
@@ -258,6 +258,7 @@ li {
   align-items: center;
   flex-direction: column;
   text-align: center;
+  z-index: 1;
 }
 
 .title {
