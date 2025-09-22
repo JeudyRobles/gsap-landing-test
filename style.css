@@ -97,7 +97,7 @@ li {
   align-items: center;
   padding: 1.5rem 2rem;
   font-family: "Geist", sans-serif;
-  z-index: 250;
+  z-index: 9;
 }
 
 .logo h1 {
