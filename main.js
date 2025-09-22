@@ -51,7 +51,7 @@ window.onload = function () {
     delay: 6.5,
   });
 
-  gsap.from(".background", {
+  gsap.from(".Background", {
     scale: 1.1,
     duration: 5,
     ease: "none",
